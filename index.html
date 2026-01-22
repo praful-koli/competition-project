@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./asset/logo2.png" type="image/x-icon">
+    <title>Editor</title>
+</head>
+
+<body>
+    <main id="main" class="main">
+        <!-- LEFT : layers Pannel -->
+        <div id="layersPanel" class="layersPanel">
+
+            <div class="topIcon">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-figma-icon lucide-figma">
+                        <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
+                        <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
+                        <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
+                        <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
+                        <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
+                    </svg>
+                </div>
+                <div class="minimizeIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-minimize2-icon lucide-minimize-2">
+                        <path d="m14 10 7-7" />
+                        <path d="M20 10h-6V4" />
+                        <path d="m3 21 7-7" />
+                        <path d="M4 14h6v6" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="pages">
+                <div class="headingPage">
+                    <h3>Pages</h3>
+                    <i class="ri-add-large-line"></i>
+                </div>
+                <p class="page">page1</p>
+                <p class="page">page2</p>
+                <p class="page">page3</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="layer">
+                <div class="headinglayer">
+                    <h3>layers</h3>
+                </div>
+                <p class="layerItems"><i class="ri-rectangle-line"></i>Reactangle</p>
+                <p class="layerItems"><i class="ri-text"></i>text</p>
+                <p class="layerItems"><i class="ri-rectangle-line"></i>Reactangle</p>
+            </div>
+        </div>
+
+        <!-- CENTER : Canvas -->
+        <div id="canvasWrapper" class="canvasWrapper">
+            <div class="canvas">
+
+            </div>
+        </div>
+
+        <!-- RIHGT : Propertiest Panel -->
+        <div id="propertiesPanel" class="propertiesPanel">
+
+            <div class="container">
+                <div class="header">
+                    <div class="user-icon">P</div>
+                    <div class="header-right">
+                        
+                        <button class="share-btn">Share</button>
+                    </div>
+                </div>
+
+                <div class="tabs">
+                    <div class="tab active">Design</div>
+                    <!-- <div class="tab">Prototype</div>
+                    <span class="zoom-indicator">100% ▼</span> -->
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>Rectangle</h2>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-title">Position</div>
+                        <div class="input-row">
+                            <div class="input-wrapper">
+                                <span class="input-label">X</span>
+                                <input type="text" value="20">
+                            </div>
+                            <div class="input-wrapper">
+                                <span class="input-label">Y</span>
+                                <input type="text" value="-38">
+                            </div>
+                        </div>
+
+                        <div class="section-title">Rotation</div>
+                        <div class="input-row">
+                            <div class="input-wrapper">
+                                <span class="input-label">↺</span>
+                                <input type="text" value="0°">
+                            </div>
+                            <div class="icon-row" style="grid-column: 2;">
+                                <button class="grid-btn">⤢</button>
+                                <button class="grid-btn">⫴</button>
+                                <button class="grid-btn">≋</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-title" style="margin-bottom: 12px;">Layout</div>
+                        <div class="section-title">Dimensions</div>
+                        <div class="input-row">
+                            <div class="input-wrapper">
+                                <span class="input-label">W</span>
+                                <input type="text" value="100">
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <div class="input-wrapper" style="flex: 1;">
+                                    <span class="input-label">H</span>
+                                    <input type="text" value="100">
+                                </div>
+                                <span class="ratio-link">🔗</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="panel-header" style="padding: 12px 0 8px 0;">
+                            <h2>Appearance</h2>
+                        </div>
+
+                        <div class="input-row">
+                            <div>
+                                <div class="section-title">Opacity</div>
+                                <div class="checkbox-input">
+                                    <input type="checkbox" checked>
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="section-title">Corner radius</div>
+                                <div class="input-wrapper">
+                                    <span class="input-label">◯</span>
+                                    <input type="text" value="0">
+                                    <span class="icon-btn">⤢</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="panel-header" style="padding: 12px 0 8px 0;">
+                            <h2>Fill</h2>
+                            
+                        </div>
+
+                        <div class="color-picker">
+                            <input type="color" class="color-swatch" value="D9D9D9">
+                            <!-- <input type="text" class="color-opacity" value="100">
+                            <span style="color: #b3b3b3;">%</span> -->
+                            
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </div>
+        
+        </div>
+    </main>
+
+    <div class="toolbar">
+        <button id="addReactangle" class="addReactangle addbtn"><i class="ri-rectangle-line"></i></button>
+        <button id="addText" class="addText addbtn"><i class="ri-text"></i></button>
+        <button id="addText" class="addText addbtn"><i class="ri-checkbox-blank-circle-line"></i><button>
+                <button id="exportJSON" class="exportJSON addbtn">Export JSON</button>
+                <button id="exportHTML" class="exportHTML addbtn">Export HTML</button>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
